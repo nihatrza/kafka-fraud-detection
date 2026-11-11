@@ -7,7 +7,7 @@
 [Overview](#-overview) •
 [Architecture](#-system-architecture) •
 [Data Model](#-relational-database-schema) •
-[Dashboard](#-streamlit-live-dashboard) •
+[Dashboard](#-streamlit-live-dashboard--executive-ui) •
 [Insights](#-key-analytical-findings) •
 [Quick Start](#-quick-start) •
 [Roadmap](#-roadmap)
@@ -22,7 +22,7 @@
 * [Pipeline Logic (ETL)](#-pipeline-logic-etl)
 * [Key Engineering Features](#-key-engineering-features)
 * [Relational Database Schema](#-relational-database-schema)
-* [Streamlit Live Dashboard](#-streamlit-live-dashboard)
+* [Streamlit Live Dashboard & Executive UI](#-streamlit-live-dashboard--executive-ui)
 * [Key Analytical Findings](#-key-analytical-findings)
 * [Tech Stack](#-tech-stack)
 * [Quick Start](#-quick-start)
@@ -37,6 +37,13 @@
 ---
 
 ## 🎯 Overview
+
+<!-- Live Streaming Demo GIF -->
+<div align="center">
+  <img src="docs/live_demo.gif" alt="Real-Time Fraud Detection Live Demo" width="100%">
+</div>
+
+<br/>
 
 An enterprise-grade, real-time financial stream processing and fraud detection system that **streams transaction events, executes low-latency machine learning inference, persists enriched predictions to cloud storage, and visualizes live risk telemetry**:
 
@@ -180,16 +187,30 @@ erDiagram
 
 ---
 
-## 📊 Streamlit Live Dashboard
+## 📊 Streamlit Live Dashboard & Executive UI
 
-The Streamlit dashboard delivers an interactive monitoring console with live metrics refreshed from the cloud PostgreSQL instance.
+Here is the real-time monitoring interface tracking live transaction streams and Machine Learning fraud alerts:
 
 ### 📄 Executive Risk Monitoring & Analytics Interface
+
+![Dashboard Overview](docs/dashboard_overview.png)
+
+*Figure 1: Executive KPI strip, US geospatial fraud hotspots, network risk vectors, and top merchant categories.*
+
+<br/>
 
 * **Top KPI Cards:** Ingested Volume (**44,532**), Blocked Fraud Events (**4,374**), Total Prevented Loss (**$10.07M**), Peak Risk Sector (**Crypto & Gaming**).
 * **Geospatial US Heatmap:** Live Plotly Choropleth displaying transaction concentration and regional risk spikes across all 50 states.
 * **Risk Matrix Visuals:** Cross-tabulation of Device Medium vs. IP Network Origin isolating anonymized TOR exit nodes.
 * **Real-Time Alert Ledger:** High-risk audit table filtering transactions with `predicted_fraud_probability > 0.80`.
+
+### 🚨 Real-Time High-Risk Audit Ledger
+
+![Live Risk Alerts](docs/live_alerts.png)
+
+*Figure 2: Real-time transaction audit log with dark-red threshold highlighting for high-probability fraud alerts.*
+
+<br/>
 
 ```python
 import psycopg2
