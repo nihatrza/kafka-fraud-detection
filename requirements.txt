@@ -1,0 +1,13 @@
+# Event Streaming & Database Drivers
+kafka-python==2.0.2
+psycopg2-binary==2.9.9
+
+# Data Processing & Machine Learning
+pandas==2.2.1
+numpy==1.26.4
+lightgbm==4.3.0
+scikit-learn==1.4.1.post1
+
+# Visualizations & Live Dashboard
+streamlit==1.32.2
+plotly==5.19.0
