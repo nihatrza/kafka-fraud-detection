@@ -1,14 +1,12 @@
--- Create database if not exists
--- CREATE DATABASE fraud_detection_db;
+-- Target table for analytical serving layer
+-- Note: Raw transaction vectors (30+ features) are processed in-memory by LightGBM
+-- Only high-value business & risk indicators are persisted below for analytical query performance.
 
--- Drop table if re-initializing schema
 DROP TABLE IF EXISTS real_time_fraud_predictions;
 
--- Create target table for Kafka-consumed real-time fraud predictions
 CREATE TABLE real_time_fraud_predictions (
     id SERIAL PRIMARY KEY,
     transaction_id VARCHAR(50) UNIQUE NOT NULL,
-    user_id VARCHAR(50) NOT NULL,
     amount NUMERIC(10, 2) NOT NULL,
     currency VARCHAR(10) DEFAULT 'USD',
     merchant_category VARCHAR(100) NOT NULL,
@@ -20,7 +18,7 @@ CREATE TABLE real_time_fraud_predictions (
     processed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Indexes for performance optimization on aggregation queries
+-- Performance Optimization Indexes
 CREATE INDEX idx_fraud_predictions_state ON real_time_fraud_predictions(state);
 CREATE INDEX idx_fraud_predictions_category ON real_time_fraud_predictions(merchant_category);
 CREATE INDEX idx_fraud_predictions_is_fraud ON real_time_fraud_predictions(predicted_is_fraud);
