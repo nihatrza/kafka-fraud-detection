@@ -1,8 +1,19 @@
+<div align="left">
+
 # 💳 End-to-End Real-Time Credit Card Fraud Detection Pipeline
 
 ### Enterprise-Grade Financial Transaction Monitoring & Streaming Analytics Platform
 
 *Sub-millisecond ML Risk Scoring & Ingestion: Kafka → LightGBM → OCI PostgreSQL → Streamlit*
+
+![Python](https://img.shields.io/badge/Python-3.10-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Apache Kafka](https://img.shields.io/badge/Apache%20Kafka-Streaming-231F20?style=for-the-badge&logo=apachekafka&logoColor=white)
+![LightGBM](https://img.shields.io/badge/LightGBM-ML%20Scoring-02A8EF?style=for-the-badge)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-OCI%20DB-336791?style=for-the-badge&logo=postgresql&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![Plotly](https://img.shields.io/badge/Plotly-Visualization-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)
+![Oracle Cloud](https://img.shields.io/badge/OCI-Infrastructure-F80000?style=for-the-badge&logo=oracle&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-Transform-150458?style=for-the-badge&logo=pandas&logoColor=white)
 
 [Overview](#-overview) •
 [Architecture](#-system-architecture) •
@@ -11,6 +22,8 @@
 [Insights](#-key-analytical-findings) •
 [Quick Start](#-quick-start) •
 [Roadmap](#-roadmap)
+
+</div>
 
 ---
 
